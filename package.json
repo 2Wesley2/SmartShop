@@ -1,0 +1,24 @@
+{
+  "name": "smartshop",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "repository": "https://github.com/2Wesley2/SmartShop.git",
+  "author": "2Wesley2 <wesley.fer.almeida98@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "shop-ui",
+    "shop-api"
+  ],
+  "scripts": {
+    "start": "concurrently \"yarn workspace shop-ui start\" \"yarn workspace shop-api start\"",
+    "lint": "concurrently \"yarn workspace shop-ui lint\" \"yarn workspace shop-api lint\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "concurrently": "^8.2.2",
+    "eslint": "9.x",
+    "eslint-plugin-react": "^7.35.0",
+    "globals": "^15.9.0"
+  }
+}
